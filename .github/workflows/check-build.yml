@@ -1,0 +1,11 @@
+name: Push Checks
+on: [push, pull_request]
+jobs:
+  linting:
+    runs-on: [self-hosted, latex]
+    steps:
+      - run: echo "Job running for branch ${{ github.ref }} in repository ${{ github.repository }}."
+      - name: Checkout repository code
+        uses: actions/checkout@v3
+      - name: Build LaTeX
+        run: make generate_paper
