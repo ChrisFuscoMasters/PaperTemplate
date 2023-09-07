@@ -1,5 +1,5 @@
 all: generate_paper
-	
+
 
 generate_paper:
 	echo "Generating paper."
