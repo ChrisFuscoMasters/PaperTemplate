@@ -1,0 +1,43 @@
+\input{constants}
+
+\arxiv % \review OR \arxiv OR \cameraready OR \cvprfinalcopy
+
+\pdfoutput=1
+\documentclass[10pt,twocolumn,letterpaper]{article}
+\input{tex/cvpr_header}
+
+\begin{document}
+
+%% Title
+\title{\paperTitle}
+\author{\authorBlock}
+\maketitle
+%%
+
+%% Sections
+\input{sections/00_abstract}
+
+\input{sections/01_introduction}
+
+\input{sections/02_related_work.tex}
+
+\input{sections/03_methods}
+
+\input{sections/04_analysis}
+
+\input{sections/05_conclusion}
+
+\input{sections/06_thanks}
+%%
+
+%% Bibliography
+{
+    \small
+    \bibliographystyle{ieee_fullname}
+    \bibliography{references}
+}
+%%
+
+% \ifarxiv \clearpage \input{sections/appendix} \fi
+
+\end{document}
