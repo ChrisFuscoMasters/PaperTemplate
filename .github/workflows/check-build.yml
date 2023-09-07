@@ -1,7 +1,7 @@
 name: Push Checks
 on: [push, pull_request]
 jobs:
-  linting:
+  generate_latex:
     runs-on: [self-hosted, latex]
     steps:
       - run: echo "Job running for branch ${{ github.ref }} in repository ${{ github.repository }}."
